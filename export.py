@@ -18,9 +18,9 @@ n_kv_heads = config.num_key_value_heads  # 4
 max_seq_len = config.max_position_embeddings  # 8192
 head_dim = config.head_dim  # 256
 
-with open("gemma2_b.bin", "wb") as f:
+with open("gemma2_2b.bin", "wb") as f:
     header = struct.pack(
-        "iiiiiiii",
+        "IIIIIIII",
         vocab_size,
         dim,
         hidden_dim,

@@ -10,3 +10,4 @@
 *.dSYM/
 *.bin
 /bin/
+/tokenizer.json
