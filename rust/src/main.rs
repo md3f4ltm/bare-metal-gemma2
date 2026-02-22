@@ -257,15 +257,10 @@ fn forward(c: &Config, w: &Weights, s: &mut RunState, token: usize, pos: usize) 
 }
 
 fn main() {
-    let tokenizer = Tokenizer::from_file("tokenizer.json").expect("Failed to load tokenizer.json");
+    let tokenizer =
+        Tokenizer::from_file("../tokenizer.json").expect("Failed to load tokenizer.json");
 
-    let path = if std::path::Path::new("gemma2_2b.bin").exists() {
-        "gemma2_2b.bin"
-    } else {
-        "gemma2_b.bin" // Fallback name
-    };
-
-    let file = File::open(path).expect("Failed to open weights file");
+    let file = File::open("../gemma2_2b.bin").expect("Failed to open weights file");
 
     // MEMORY MAPPING: Kinda like magic. Rust to hard for me tech bros.
     let mmap = unsafe { MmapOptions::new().map(&file).expect("Failed to mmap file") };
