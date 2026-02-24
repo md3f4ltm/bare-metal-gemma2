@@ -91,7 +91,3 @@ To handle sliding window attention in the KV cache:
 ### Memory Mapping
 Zero-copy inference is achieved by mapping the binary weight file into memory. In Nim or Rust, this is handled via `mmap` / `memmap2`, treating the resulting pointer as a raw array of `f32`.
 
-## 5. References
-- [Google Gemma 2 Technical Report](https://arxiv.org/abs/2408.00118)
-- [Hugging Face Gemma 2 Modeling](https://github.com/huggingface/transformers/blob/main/src/transformers/models/gemma2/modeling_gemma2.py)
-- [Rotary Embeddings (RoPE) Explained](https://blog.eleuther.ai/rotary-embeddings/)
