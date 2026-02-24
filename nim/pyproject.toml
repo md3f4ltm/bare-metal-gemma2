@@ -1,0 +1,11 @@
+[project]
+name = "nim"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "numpy>=2.4.2",
+    "tokenizer>=3.6.2",
+    "tokenizers>=0.22.2",
+]
