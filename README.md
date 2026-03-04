@@ -23,10 +23,11 @@ Download and export the weights from Hugging Face using the `export.py` script. 
 python export.py
 ```
 
-If you don't want to use the `export.py` script, i also uploaded the exported weights to hugging face.
+If you don't want to use the `export.py` script, i also uploaded the exported weights and tokenizer to hugging face.
 
 ```bash
 wget https://huggingface.co/d3falt-dev/gemma2-2b-bin/resolve/main/gemma2_2b.bin
+wget https://huggingface.co/d3falt-dev/gemma2-2b-bin/resolve/main/tokenizer.json
 ```
 
 Compile the Rust code and run the inference:
